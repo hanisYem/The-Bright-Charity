@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> Blog - Charity </title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1> Charity Blog </h1>
+        <p> Read about our latest campaigns, events, and success stories. </p>
+    </header>
+
+    <!-- Hamburger Button -->
+    <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href = "index.html"> Home </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+            <li><a href = "campaigns.html"> Campaigns </a></li>
+            <li><a href = "involved.html"> Get Involved </a></li>
+            <li><a href = "contact.html"> Contact Us </a></li>
+            <li class = "dropdown">
+                <a href = "#" class = "dropbtn"> More </a>
+                <div class = "dropdown-content">
+                    <a href = "faq.html"> FAQ </a>
+                    <a href = "blog.html"> Blog </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class = "social-sidebar">
+        <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+            <img src = "images/ln.png" alt = "LinkedIn" />
+        </a>
+        <a href = "https://www.google.com" target = "_blank" title = "Google">
+            <img src = "images/google.png" alt = "Google" />
+        </a>
+        <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+            <img src = "images/twitter.png" alt = "Twitter" />
+        </a>
+        <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+            <img src = "images/youtube.png" alt = "YouTube" />
+        </a>
+        <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+            <img src = "images/instagram.png" alt = "Instagram" />
+        </a>
+    </div>
+
+    <section class = "blog-section">
+        <article class = "blog-post">
+            <h2> Making a Difference: Our Recent Health Campaign </h2>
+            <p><em> Published on April 1, 2025 </em></p>
+            <p> We recently completed a successful health campaign in underserved communities. Volunteers provided free health checks and shared knowledge on preventive healthcare. Over 500 people participated, many of whom had never had a health screening before. The campaign helped connect individuals to local healthcare services, and we received positive feedback from the community. We’re excited to expand this initiative to more areas in the future. </p>
+        </article>
+
+        <article class = "blog-post">
+            <h2> Join Us for Our Annual Fundraising Event </h2>
+            <p><em> Published on March 15, 2025 </em></p>
+            <p> Our annual fundraising event is just around the corner! This year, we aim to raise funds to provide educational resources for children in need. The event will feature a charity auction, performances by children who have benefited from our programs, and stories from families impacted by our work. The funds raised will go towards scholarships, school supplies, and mentorship programs to support children in their educational journey. </p>
+        </article>
+
+        <article class = "blog-post">
+            <h2> Empowering Communities: Our Recent Skill-Building Workshop </h2>
+            <p><em> Published on April 25, 2025 </em></p>
+            <p> We recently hosted a series of skill-building workshops in underserved communities. Topics included financial literacy, digital skills, and vocational training. Over 100 individuals attended, gaining valuable skills that will help improve their lives. The workshops were interactive, and we received great feedback from participants. We're excited to offer more opportunities for skill development in the coming months. </p>
+        </article>
+
+        <article class = "blog-post">
+            <h2> Celebrating Volunteerism: A Tribute to Our Amazing Volunteers </h2>
+            <p><em> Published on April 20, 2025 </em></p>
+            <p> We want to take a moment to celebrate our incredible volunteers who make everything we do possible. Recently, we held a special appreciation event to honor their hard work. Volunteers play a vital role in our programs, from health campaigns to fundraising events. If you’re looking to give back to your community, we invite you to join our team of passionate volunteers and help us make a difference. </p>
+        </article>
+    </section>
+
+    <script>
+        fetch( "social-sidebar.html" )
+        .then( response => response.text() )
+        .then( html => document.body.insertAdjacentHTML( "afterbegin", html ) );
+    </script>
+
+    <footer>
+        <p> &copy; 2025 Charity Organization. All rights reserved. </p>
+    </footer>
+</body>
+</html>

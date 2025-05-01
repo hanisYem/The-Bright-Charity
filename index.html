@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Charity - Home</title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+
+    <!-- Custom Styles -->
+    <link rel = "stylesheet" href = "css/styles.css">
+
+    <!-- FullCalendar Styles -->
+    <link href = "https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel = "stylesheet">
+
+    <!-- jQuery (required by FullCalendar v3) -->
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- jQuery Mobile -->
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Moment.js (required by FullCalendar v3) -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- FullCalendar v3 Script -->
+    <script src = "https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+
+    <!-- Optional Scroll to Top -->
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Our Charity</h1>
+    <p>Helping those in need through community-driven efforts.</p>
+  </header>
+
+  <!-- ✅ Hamburger Button (Mobile Only) -->
+  <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+  <nav>
+    <ul>
+      <li><a href = "about.html">About Us</a></li>
+      <li><a href = "campaigns.html">Campaigns</a></li>
+      <li><a href = "involved.html">Get Involved</a></li>
+      <li><a href = "contact.html">Contact Us</a></li>
+      <li class = "dropdown">
+        <a href = "#" class = "dropbtn">More</a>
+        <div class = "dropdown-content">
+          <a href = "faq.html">FAQ</a>
+          <a href = "blog.html">Blog</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      Our mission is to support underserved communities by providing education, healthcare, and essential resources. Through our efforts, we aim to create lasting change and empower individuals to build a brighter future.
+    </p>
+    <p>
+      Join us in making a difference. Whether through donations, volunteering, or spreading awareness, every effort counts!
+    </p>
+  </section>
+  
+  <div class = "slideshow-container">
+    <!-- Slide 1 -->
+    <div class = "mySlides fade">
+      <img src = "images/event1.jpg" alt = "Charity Event 1" style = "width:60%">
+    </div>
+    <!-- Slide 2 -->
+    <div class = "mySlides fade">
+      <img src = "images/event2.jpg" alt = "Charity Event 2" style = "width:60%">
+    </div>
+    <!-- Slide 3 -->
+    <div class = "mySlides fade">
+      <img src = "images/event3.jpg" alt = "Charity Event 3" style = "width:60%">
+    </div>
+  </div>
+  
+  <div class = "social-sidebar">
+    <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+      <img src = "images/ln.png" alt = "LinkedIn" />
+    </a>
+    <a href = "https://www.google.com" target = "_blank" title = "Google">
+      <img src = "images/google.png" alt = "Google" />
+    </a>
+    <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+      <img src = "images/twitter.png" alt = "Twitter" />
+    </a>
+    <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+      <img src = "images/youtube.png" alt = "YouTube" />
+    </a>
+    <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+      <img src = "images/instagram.png" alt = "Instagram" />
+    </a>
+  </div>
+
+  <section>
+    <h2>Upcoming Campaigns</h2>
+    <ul>
+      <li><strong>Food Drive:</strong> Help us gather essential food items for families in need.</li>
+      <li><strong>Health Awareness:</strong> Promoting health and wellness in underserved areas.</li>
+      <li><strong>Education Support:</strong> Providing school supplies and tutoring for underprivileged children.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Upcoming Events</h2>
+    <div id = "calendar-container">
+        <div id = "calendar"></div>
+    </div>
+  </section>
+
+  <div class = "nav-buttons">
+    <button onclick = "scrollToTop()">⬆ Top</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Charity Organization. All rights reserved.</p>
+  </footer>
+
+  <script src = "js/scripts.js"></script>
+  <script>
+  fetch("social-sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML("afterbegin", data);
+    });
+  </script>
+
+</body>
+</html>

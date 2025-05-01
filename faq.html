@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>FAQ - Charity</title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to some common questions below.</p>
+    </header>
+
+    <!-- Hamburger Button -->
+    <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href = "index.html">Home</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "campaigns.html">Campaigns</a></li>
+        <li><a href = "involved.html">Get Involved</a></li>
+        <li><a href = "contact.html">Contact Us</a></li>
+        <li class = "dropdown">
+          <a href = "#" class = "dropbtn">More</a>
+          <div class = "dropdown-content">
+            <a href = "faq.html">FAQ</a>
+            <a href = "blog.html">Blog</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class = "social-sidebar">
+      <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+        <img src = "images/ln.png" alt = "LinkedIn" />
+      </a>
+      <a href = "https://www.google.com" target = "_blank" title = "Google">
+        <img src = "images/google.png" alt = "Google" />
+      </a>
+      <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+        <img src = "images/twitter.png" alt = "Twitter" />
+      </a>
+      <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+        <img src = "images/youtube.png" alt = "YouTube" />
+      </a>
+      <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+        <img src = "images/instagram.png" alt = "Instagram" />
+      </a>
+    </div>
+
+    <section class = "faq-section">
+        <h2>General Questions</h2>
+        <div class = "faq-item">
+            <h3>What is the mission of the charity?</h3>
+            <p>Our mission is to support underserved communities by providing education, healthcare, and essential resources.</p>
+        </div>
+        <div class = "faq-item">
+            <h3>How can I donate?</h3>
+            <p>You can donate online through our donation form, or by participating in our fundraising campaigns.</p>
+        </div>
+        <div class = "faq-item">
+            <h3>How can I get involved?</h3>
+            <p>You can volunteer with us, participate in campaigns, or help spread awareness about our causes.</p>
+        </div>
+        <div class = "faq-item">
+            <h3>Where do my donations go?</h3>
+            <p>All donations go directly to supporting the various programs we run for education, healthcare, and community development.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; 2025 Charity Organization. All rights reserved. </p>
+    </footer>
+    
+    <script>
+        fetch("social-sidebar.html")
+        .then(response => response.text())
+        .then(html => document.body.insertAdjacentHTML("afterbegin", html));
+    </script>
+
+</body>
+</html>

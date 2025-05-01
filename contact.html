@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Contact Us - Charity</title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Reach out with any questions or to get involved.</p>
+    </header>
+
+    <!-- Hamburger Button -->
+    <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href = "index.html">Home</a></li>
+        <li><a href = "about.html">About Us</a></li>
+        <li><a href = "campaigns.html">Campaigns</a></li>
+        <li><a href = "involved.html">Get Involved</a></li>
+        <li><a href = "contact.html">Contact Us</a></li>
+        <li class = "dropdown">
+          <a href = "#" class = "dropbtn">More</a>
+          <div class = "dropdown-content">
+            <a href = "faq.html">FAQ</a>
+            <a href = "blog.html">Blog</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+        <h2>Get in Touch</h2>
+        <p>Email: <a href = "mailto:hanis.ibrahim16@gmail.com">info@charity.org</a></p>
+        <p>Phone: <a href = "tel:+0199602691">+0199602691</a></p>
+
+        <h2>Contact Form</h2>
+        <form id = "contactForm">
+            <label for = "contactName">Full Name:</label>
+            <input type = "text" id = "contactName" placeholder = "Enter your full name" required>
+
+            <label for = "contactEmail">Email Address:</label>
+            <input type = "email" id = "contactEmail" placeholder = "Enter your email" required>
+
+            <label for = "message">Message:</label>
+            <textarea id = "message" rows = "5" placeholder = "Write your message here..." required></textarea>
+
+            <button type = "submit">Send</button>
+        </form>
+    </section>
+
+    <div class = "social-sidebar">
+      <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+        <img src = "images/ln.png" alt = "LinkedIn" />
+      </a>
+      <a href = "https://www.google.com" target = "_blank" title = "Google">
+        <img src = "images/google.png" alt = "Google" />
+      </a>
+      <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+        <img src = "images/twitter.png" alt = "Twitter" />
+      </a>
+      <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+        <img src = "images/youtube.png" alt = "YouTube" />
+      </a>
+      <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+        <img src = "images/instagram.png" alt = "Instagram" />
+      </a>
+    </div>
+
+    <div class = "nav-buttons">
+        <button onclick = "history.back()">⬅ Back</button>
+        <button onclick = "scrollToTop()">⬆ Top</button>
+    </div>
+
+    <footer>
+        <p> &copy; 2025 Charity Organization. All rights reserved.  </p>
+    </footer>
+    
+    <script src = "js/scripts.js"></script>
+    <script>
+        fetch("social-sidebar.html")
+        .then(response => response.text())
+        .then(html => document.body.insertAdjacentHTML("afterbegin", html));
+    </script>
+
+</body>
+</html>

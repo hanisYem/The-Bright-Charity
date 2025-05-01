@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> About Us - Charity </title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1> About Us </h1>
+        <p> Empowering communities, one initiative at a time. </p>
+    </header>
+
+    <!-- Hamburger Button -->
+    <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "about.html">About Us</a></li>
+            <li><a href = "campaigns.html">Campaigns</a></li>
+            <li><a href = "involved.html">Get Involved</a></li>
+            <li><a href = "contact.html">Contact Us</a></li>
+            <li class = "dropdown">
+                <a href = "#" class = "dropbtn">More</a>
+                <div class = "dropdown-content">
+                    <a href = "faq.html">FAQ</a>
+                    <a href = "blog.html">Blog</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2> Who We Are </h2>
+            <p> We are a dedicated charity committed to uplifting lives through education, food drives, and support programs. </p>
+        </section>
+
+        <section>
+            <h2> Our History </h2>
+            <p> Founded in 2023, our organization started with a small group of volunteers determined to make a difference. Over the years, we have expanded our reach, impacting thousands of lives through various community-driven initiatives. </p>
+        </section>
+
+        <section>
+            <h2> Our Vision </h2>
+            <p> To create a world where everyone has access to necessities, education, and opportunities for a better future. </p>
+        </section>
+
+        <section>
+            <h2> Our Goals </h2>
+            <ul>
+                <li><strong> Eradicate Hunger : </strong> Provide food security to underprivileged communities. </li>
+                <li><strong> Education for All : </strong> Ensure every child has access to quality education. </li>
+                <li><strong> Healthcare Access : </strong> Support health and wellness programs in underserved areas. </li>
+                <li><strong> Community Empowerment : </strong> Create sustainable solutions for self-sufficient communities. </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> Our Team </h2>
+            <div class = "team-grid">
+                <div class = "image-container">
+                    <div class = "glow-ring"></div>
+                    <img src = "images/hanis.jpg" alt = "Hanis Ibrahim | F1081">
+                    <div class = "name-text">NURUL HANIS | F1081</div>
+                </div>
+                <div class = "image-container">
+                    <div class = "glow-ring"></div>
+                    <img src = "images/yoges.jpg" alt = "Yoges Mohan | F1070">
+                    <div class = "name-text">YOGES MOHAN | F1070</div>
+                </div>
+                <div class = "image-container">
+                    <div class = "glow-ring"></div>
+                    <img src = "images/syahida.jpg" alt = "Syahida Husna | F1076">
+                    <div class = "name-text">SYAHIDA HUSNA | F1076</div>
+                </div>
+                <div class = "image-container">
+                    <div class = "glow-ring"></div>
+                    <img src = "images/aisya.jpg" alt = "Aisya Sufia | F1051">
+                    <div class = "name-text">AISYA SUFIA | F1051</di
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class = "social-sidebar">
+        <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+            <img src = "images/ln.png" alt = "LinkedIn">
+        </a>
+        <a href = "https://www.google.com" target = "_blank" title = "Google">
+            <img src = "images/google.png" alt = "Google">
+        </a>
+        <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+            <img src = "images/twitter.png" alt = "Twitter">
+        </a>
+        <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+            <img src = "images/youtube.png" alt = "YouTube">
+        </a>
+        <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+            <img src = "images/instagram.png" alt = "Instagram">
+        </a>
+    </div>
+
+    <div class = "nav-buttons">
+        <button onclick = "history.back()">⬅ Back</button>
+        <button onclick = "scrollToTop()">⬆ Top</button>
+    </div>
+
+    <footer>
+        <p> &copy; 2025 Charity Organization. All rights reserved. </p>
+    </footer>
+</body>
+</html>

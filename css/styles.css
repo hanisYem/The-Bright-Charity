@@ -1,0 +1,624 @@
+/* GENERAL STYLES FOR RESETTING MARGIN, PADDING AND BOX SIZING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SEGEO UI', TAHOMA, GENEVA, VERDANA, SANS-SERIF;
+}
+
+/* ENABLE SMOOTH SCROLL BEHAVIOR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY BACKGROUND GRADIENT AND BASE TEXT STYLE */
+body {
+    background: linear-gradient(135deg, #FFE6F0, #E0CCFF, #D0F0FF);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* HEADER STYLING WITH GRADIENT, CENTERED TEXT AND DROP SHADOW */
+header {
+    background: linear-gradient(90deg, #FF6EC4, #7873F5);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* NAVIGATION BAR STYLING */
+nav {
+    background: #5E2B97;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* NAVIGATION LIST STYLING */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+/* NAVIGATION ITEMS SPACING */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* NAVIGATION LINKS STYLE AND HOVER EFFECT */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #9B59B6;
+}
+
+/* GENERAL SECTION STYLING FOR CONTENT BLOCKS */
+section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+}
+
+/* SECTION HEADINGS COLOR */
+section h2 {
+    color: #8E44AD;
+    margin-bottom: 10px;
+}
+
+/* CAMPAIGNS CONTAINER USING FLEX WRAP */
+.campaigns-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* INDIVIDUAL CAMPAIGN CARD STYLE */
+.campaign {
+    width: 300px;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+/* CAMPAIGN HOVER SCALE EFFECT */
+.campaign:hover {
+    transform: scale(1.05);
+}
+
+/* CAMPAIGN IMAGE STYLING */
+.campaign img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CAMPAIGN TITLE STYLING */
+.campaign h3 {
+    margin-top: 10px;
+    color: #9B59B6;
+}
+
+/* CAMPAIGN DESCRIPTION STYLING */
+.campaign p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* FORM LAYOUT WITH FLEX COLUMN */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* FORM LABEL FONT STYLE */
+form label {
+    font-weight: bold;
+}
+
+/* INPUT AND TEXTAREA FIELD STYLES */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #F9F9F9;
+}
+
+/* DISABLE TEXTAREA RESIZE */
+form textarea {
+    resize: none;
+}
+
+/* FORM BUTTON STYLING WITH GRADIENT */
+form button {
+    background: linear-gradient(90deg, #A64BF4, #D946EF);
+    color: white;
+    padding: 12px 18px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* FORM BUTTON HOVER GRADIENT CHANGE */
+form button:hover {
+    background: linear-gradient(90deg, #7E3AF2, #C026D3);
+}
+
+/* NAVIGATION BUTTON GROUP CENTERING */
+.nav-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* NAVIGATION BUTTON STYLE AND HOVER */
+.nav-buttons button {
+    background: #A64BF4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background: #7E3AF2;
+}
+
+/* INVOLVEMENT IMAGE CONTAINER FLEX SETUP */
+.involvement-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* INVOLVEMENT CARD STYLING */
+.involvement {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* INVOLVEMENT IMAGE STYLING */
+.involvement img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ADD TRANSITION AND GLOW ANIMATION TO IMAGES */
+.involvement img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 12px;
+}
+
+/* IMAGE GLOW ON HOVER */
+.involvement:hover img {
+    transform: scale(1.05);
+    animation: glowAnimation 1.5s infinite;
+}
+
+/* KEYFRAMES FOR GLOW EFFECT */
+@keyframes glowAnimation {
+    0% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(0, 128, 128, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.3); }
+}
+
+/* FADE IN ANIMATION FOR INVOLVEMENT ITEMS */
+.involvement {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* DELAYED ANIMATION FOR MULTIPLE ELEMENTS */
+.involvement:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.involvement:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* KEYFRAMES FOR SLIDE-UP FADE-IN EFFECT */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER STYLING */
+footer {
+    background: #5E2B97;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE STYLES FOR SMALLER SCREENS */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .campaign {
+        width: 90%;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+    }
+}
+
+/* DROPDOWN BUTTON STYLE */
+.dropbtn {
+    background-color: #7E3AF2;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* DROPDOWN CONTAINER POSITIONING */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* DROPDOWN MENU STYLE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9B59B6;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* DROPDOWN LINKS STYLE */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+/* HOVER EFFECT FOR DROPDOWN LINKS */
+.dropdown-content a:hover {
+    background-color: #D946EF;
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CHANGE BUTTON COLOR ON HOVER */
+.dropdown:hover .dropbtn {
+    background-color: #9B59B6;
+}
+
+/* SLIDESHOW CONTAINER STYLES */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* HIDE SLIDES BY DEFAULT */
+.mySlides {
+    display: none;
+}
+
+/* SLIDESHOW IMAGE STYLING */
+.mySlides img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* TEXT CAPTION ON SLIDE */
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* FADE EFFECT FOR SLIDES */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* CALENDAR BOX STYLING */
+#calendar {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* INNER CALENDAR CONTAINER STYLING */
+#calendar-container {
+    padding: 20px;
+    background-color: #FFFFFFCC;
+    border-radius: 10px;
+}
+
+/* HAMBURGER BUTTON FOR MOBILE MENU */
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    background: #5E2B97;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* RESPONSIVE NAVIGATION TOGGLE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #5E2B97;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* IMAGE CONTAINER WITH GLOWING RING */
+.image-container {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* PROFILE IMAGE STYLING */
+.image-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    border: 4px solid #FFF;
+}
+
+/* RAINBOW GLOWING RING AROUND IMAGE */
+.glow-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red, orange, yellow, green, cyan, blue, violet, red
+    );
+    animation: rotate 4s linear infinite;
+    z-index: 1;
+    filter: blur(8px);
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* TEXT UNDER PROFILE IMAGE */
+.name-text {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8E44AD;
+}
+
+/* FIXED SIDEBAR FOR SOCIAL ICONS */
+.social-sidebar {
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 5px;
+    background-color: #F0F8FF;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* ICON STYLING AND HOVER SCALE */
+.social-sidebar a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-sidebar a img:hover {
+    transform: scale(1.15);
+}
+
+/* FAQ TEXT FADE-IN ANIMATION */
+.faq-item h3,
+.faq-item p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 0.8s ease-out forwards;
+}
+
+/* STAGGERED FAQ ANIMATION DELAYS */
+.faq-item:nth-child(1) h3,
+.faq-item:nth-child(1) p {
+    animation-delay: 0.1s;
+}
+.faq-item:nth-child(2) h3,
+.faq-item:nth-child(2) p {
+    animation-delay: 0.3s;
+}
+.faq-item:nth-child(3) h3,
+.faq-item:nth-child(3) p {
+    animation-delay: 0.5s;
+}
+.faq-item:nth-child(4) h3,
+.faq-item:nth-child(4) p {
+    animation-delay: 0.7s;
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BLOG SECTION SLIDE-IN ANIMATION */
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* INITIAL HIDDEN STATE FOR BLOG POSTS */
+.blog-post {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 1.2s ease-out forwards;
+    animation-delay: var(--delay);
+}
+
+/* STAGGERED BLOG POST DELAYS */
+.blog-post:nth-child(1) {
+    --delay: 0.3s;
+}
+.blog-post:nth-child(2) {
+    --delay: 0.6s;
+}
+
+/* TITLE UNDERLINE ANIMATION */
+.blog-post h2 {
+    position: relative;
+    overflow: hidden;
+}
+.blog-post h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: teal;
+    bottom: 0;
+    left: -100%;
+    animation: underlineSlide 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes underlineSlide {
+    to {
+        left: 0;
+    }
+}
+
+/* OPTIONAL HOVER EFFECT FOR BLOG POST */
+.blog-post:hover {
+    background-color: #F0F8FF;
+    transition: background-color 0.4s ease-in-out;
+    border-radius: 10px;
+    padding: 1rem;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> Get Involved - Charity </title>
+    <link rel = "stylesheet" href = "css/styles.css">
+    <script src = "scripts.js" defer></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1> Get Involved </h1>
+        <p> Your actions can change lives. </p>
+    </header>
+
+    <!-- ✅ Hamburger Button -->
+    <button class = "hamburger" onclick = "toggleMenu()">☰</button>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href = "index.html"> Home </a></li>
+            <li><a href = "about.html"> About Us </a></li>
+            <li><a href = "campaigns.html"> Campaigns </a></li>
+            <li><a href = "involved.html"> Get Involved </a></li>
+            <li><a href = "contact.html"> Contact Us </a></li>
+            <li class = "dropdown">
+                <a href = "#" class = "dropbtn"> More </a>
+                <div class = "dropdown-content">
+                    <a href = "faq.html"> FAQ </a>
+                    <a href = "blog.html"> Blog </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2> Ways to Help </h2>
+        <p> Volunteer, donate, or partner with us to make a lasting impact. </p>
+
+        <div class = "involvement-container">
+            <div class = "involvement">
+                <img src = "images/volunteer.jpg" alt = "Volunteer">
+                <h3> Volunteer </h3>
+                <p> Join our team and contribute your time and skills. </p>
+                <a href = "https://www.mivaction.com/" class = "btn"> Sign Up </a>
+            </div>
+
+            <div class = "involvement">
+                <img src = "images/donate.jpg" alt = "Donate">
+                <h3> Donate </h3>
+                <p> Your generosity helps us reach more people in need. </p>
+                <a href = "https://www.salvationarmy.org.my/wtg-donate-money/" class = "btn"> Donate Now </a>
+            </div>
+
+            <div class = "involvement">
+                <img src = "images/partner.png" alt = "Partner">
+                <h3> Partnerships </h3>
+                <p> Collaborate with us to expand our mission. </p>
+                <a href = "https://www.endeavormalaysia.org/partnerships" class = "btn"> Learn More </a>
+            </div>
+        </div>
+    </section>
+    
+    <div class = "social-sidebar">
+        <a href = "https://www.linkedin.com" target = "_blank" title = "LinkedIn">
+            <img src = "images/ln.png" alt = "LinkedIn" />
+        </a>
+        <a href = "https://www.google.com" target = "_blank" title = "Google">
+            <img src = "images/google.png" alt = "Google" />
+        </a>
+        <a href = "https://www.twitter.com" target = "_blank" title = "Twitter">
+            <img src = "images/twitter.png" alt = "Twitter" />
+        </a>
+        <a href = "https://www.youtube.com" target = "_blank" title = "YouTube">
+            <img src = "images/youtube.png" alt = "YouTube" />
+        </a>
+        <a href = "https://www.instagram.com" target = "_blank" title = "Instagram">
+            <img src = "images/instagram.png" alt = "Instagram" />
+        </a>
+    </div>
+
+    <div class = "nav-buttons">
+        <button onclick = "history.back()"> ⬅ Back </button>
+        <button onclick = "scrollToTop()"> ⬆ Top </button>
+    </div>
+
+    <footer>
+        <p> &copy; 2025 Charity Organization. All rights reserved.  </p>
+    </footer>
+    
+    <script src = "js/scripts.js"></script>
+</body>
+</html>
